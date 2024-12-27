@@ -1,0 +1,149 @@
+/* 전체 페이지에서 스크롤을 방지 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* 스크롤이 생기지 않도록 설정 */
+  font-family: 'Arial', sans-serif; /* 글꼴 설정 */
+}
+
+/* 로그인 화면 디자인 */
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f4f6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.login-screen h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.login-screen form {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-screen input {
+  padding: 12px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+.login-screen input:focus {
+  border-color: #4CAF50; /* 포커스 시 색상 변경 */
+  outline: none;
+}
+
+.login-screen button {
+  padding: 12px 25px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-screen button:hover {
+  background-color: #45a049; /* 버튼 hover 효과 */
+}
+
+.login-screen p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 게임 화면 */
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.character {
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+  position: absolute;
+}
+
+.obstacle {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  position: absolute;
+}
+
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+}
+
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #FF5733;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #e74c3c;
+}
+
+/* 순위를 오른쪽에 크게 표시 */
+.high-scores {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 18px;
+  color: black;
+  font-weight: normal;
+  line-height: 2;
+  text-align: right;
+}
+
+.high-scores ul {
+  list-style: none;
+  padding: 0;
+}
